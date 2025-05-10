@@ -41,7 +41,9 @@ npm install
 3. Create .env file
 
 PORT=5000
+
 MONGO_URI=mongodb://localhost:27017/Booking-app
+
 JWT_SECRET=your_secret_key
 
 4. Start the development server
