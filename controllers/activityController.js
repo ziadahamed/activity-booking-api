@@ -1,13 +1,13 @@
 const Activity = require('../models/Activity');
 const Booking = require('../models/Booking');
 
-// ✅ List public activities
+
 exports.listActivities = async (req, res) => {
   const activities = await Activity.find();
   res.json(activities);
 };
 
-// ✅ Book an activity
+
 exports.bookActivity = async (req, res) => {
   const userId = req.user.userId; // from JWT
   const { activityId } = req.body;
@@ -21,7 +21,7 @@ exports.bookActivity = async (req, res) => {
   }
 };
 
-// ✅ Get bookings of logged-in user
+
 exports.getMyBookings = async (req, res) => {
   try {
     const userId = req.user.userId;

@@ -8,16 +8,16 @@ const {
   getMyBookings
 } = require('../controllers/activityController');
 
-// 📌 Public: List all activities
+
 router.get('/activities', listActivities);
 
-// 🔐 Protected: Book an activity
+
 router.post('/book', auth, bookActivity);
 
-// 🔐 Protected: Get all bookings for logged-in user
+
 router.get('/my-bookings', auth, getMyBookings);
 
-// 🛠 Dev-only: Create a sample activity (use temporarily)
+
 router.post('/create-activity', async (req, res) => {
   try {
     const activity = new Activity({
